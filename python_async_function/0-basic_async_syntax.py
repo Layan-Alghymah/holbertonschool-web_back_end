@@ -1,12 +1,13 @@
+
 #!/usr/bin/env python3
-"""Provide a coroutine that waits for a random delay."""
+"""This module provides an asynchronous random delay function."""
 
 import asyncio
 import random
 
 
 async def wait_random(max_delay: int = 10) -> float:
-    """Wait for a random duration and return the delay."""
+    """Wait for a random number of seconds and return the delay."""
     delay = random.uniform(0, max_delay)
     await asyncio.sleep(delay)
     return delay
